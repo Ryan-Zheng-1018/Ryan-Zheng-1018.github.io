@@ -21,11 +21,11 @@ jobs:
         with:
           python-version: "3.14"
           cache: pip
-      - run: pip install -r requirements.txt
+      - run: pip install -r packages.txt
 
       - name: Build the book
         run: |
-          jupyter-book build .
+          jupyter-book build all.
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
